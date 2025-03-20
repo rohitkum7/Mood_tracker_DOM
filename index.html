@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img:hover {
+        transform: scale(1.1);
+      }
+      #mood {
+        display: grid;
+        margin: 10px 0 0 20px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <h2>Today is <span data-currentDate></span></h2>
+      <h1>How are you today?</h1>
+      <div>
+        <nav id="mood">
+          <a>
+            <img
+              src="./assets/happy.png"
+              alt="Happy"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Happy"
+            />
+          </a>
+          <a>
+            <img
+              src="./assets/excited.png"
+              alt="Exicted"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Excited"
+            />
+          </a>
+          <a>
+            <img
+              src="./assets/angry-face.png"
+              alt="Angry"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Angry"
+            />
+          </a>
+          <a>
+            <img
+              src="./assets/annoyed.png"
+              alt="Annoyed"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Annoyed"
+          /></a>
+          <a>
+            <img
+              src="./assets/upset.png"
+              alt="Upset"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="upset"
+            />
+          </a>
+          <a>
+            <img
+              src="./assets/sick.png"
+              alt="Sick"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Sick"
+            />
+          </a>
+          <a>
+            <img
+              src="./assets/sleeping.png"
+              alt="Sleepy"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="sleeping"
+            />
+          </a>
+
+          <a>
+            <img
+              src="./assets/depressed.png"
+              alt="Depressed"
+              width="100px"
+              height="100px"
+              style="transition: ease-in 0.2s"
+              title="Depressed"
+            />
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div data-display-mood></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
