@@ -13,13 +13,10 @@ const moodContainer = document.querySelector("[data-display-mood]");
 // getting all the moods as an array
 const moods = document.getElementById("mood").children;
 const moodsArray = [...moods];
-console.log(moodsArray);
 
 //Function to display the mood
 
 function displayMood(value, needDate) {
-  console.log(needDate);
-
   if (!needDate) needDate = date;
   const emoji = moodsArray.filter((mood) => {
     if (mood.childNodes[1].alt === value) return mood;
@@ -57,11 +54,9 @@ if (isMoodSelected) {
 } else {
   moodsArray.forEach((mood) =>
     mood.addEventListener("click", (e) => {
-      console.log(e.target.alt);
       displayMood(e.target.alt);
       let storageData = `${e.target.alt}-${date}`;
       moodData.push(storageData);
-      console.log(moodData);
 
       localStorage.setItem("data", JSON.stringify(moodData));
     })
